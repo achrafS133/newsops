@@ -1,0 +1,13 @@
+2025-11-30 15:12:30 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - LOGS_CAPTURED - Started capturing logs in process (pid: 197).
+2025-11-30 15:12:30 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - process_news - STEP_START - Started execution of step "process_news".
+11/30/2025 03:12:30 PM - Context impl SQLiteImpl.
+11/30/2025 03:12:30 PM - Will assume non-transactional DDL.
+2025-11-30 15:12:30 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - process_news - Loading file from: /opt/dagster/dagster_home/storage/ingest_news using PickledObjectFilesystemIOManager...
+2025-11-30 15:12:30 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - process_news - LOADED_INPUT - Loaded input "ingest_news" using input manager "io_manager", from output "result" of step "ingest_news"
+2025-11-30 15:12:30 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - process_news - STEP_INPUT - Got input "ingest_news" of type "DataFrame". (Type check passed).
+11/30/2025 03:12:30 PM - Processed sentiment for 100 articles.
+2025-11-30 15:12:30 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - process_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 15:12:30 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - process_news - Writing file at: /opt/dagster/dagster_home/storage/process_news using PickledObjectFilesystemIOManager...
+2025-11-30 15:12:31 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - process_news - ASSET_MATERIALIZATION - Materialized value process_news.
+2025-11-30 15:12:31 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - process_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 15:12:31 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 197 - process_news - STEP_SUCCESS - Finished execution of step "process_news" in 936ms.

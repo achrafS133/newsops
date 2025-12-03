@@ -1,0 +1,13 @@
+2025-12-01 10:07:56 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - LOGS_CAPTURED - Started capturing logs in process (pid: 4305).
+2025-12-01 10:07:57 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - process_news - STEP_START - Started execution of step "process_news".
+12/01/2025 10:07:57 AM - Context impl SQLiteImpl.
+12/01/2025 10:07:57 AM - Will assume non-transactional DDL.
+2025-12-01 10:07:57 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - process_news - Loading file from: /opt/dagster/dagster_home/storage/ingest_news using PickledObjectFilesystemIOManager...
+2025-12-01 10:07:57 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - process_news - LOADED_INPUT - Loaded input "ingest_news" using input manager "io_manager", from output "result" of step "ingest_news"
+2025-12-01 10:07:57 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - process_news - STEP_INPUT - Got input "ingest_news" of type "DataFrame". (Type check passed).
+12/01/2025 10:07:57 AM - Processed sentiment for 20 articles.
+2025-12-01 10:07:57 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - process_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-12-01 10:07:57 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - process_news - Writing file at: /opt/dagster/dagster_home/storage/process_news using PickledObjectFilesystemIOManager...
+2025-12-01 10:07:58 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - process_news - ASSET_MATERIALIZATION - Materialized value process_news.
+2025-12-01 10:07:58 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - process_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-12-01 10:07:58 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 4305 - process_news - STEP_SUCCESS - Finished execution of step "process_news" in 1.07s.

@@ -1,0 +1,11 @@
+2025-12-01 14:31:28 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13800 - LOGS_CAPTURED - Started capturing logs in process (pid: 13800).
+2025-12-01 14:31:28 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13800 - extract_locations - STEP_START - Started execution of step "extract_locations".
+2025-12-01 14:31:28 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - extract_locations - Loading file from: /opt/dagster/dagster_home/storage/3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0/extract_topics/result using PickledObjectFilesystemIOManager...
+2025-12-01 14:31:28 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13800 - extract_locations - LOADED_INPUT - Loaded input "extract_topics" using input manager "io_manager", from output "result" of step "extract_topics"
+2025-12-01 14:31:28 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13800 - extract_locations - STEP_INPUT - Got input "extract_topics" of type "DataFrame". (Type check passed).
+12/01/2025 02:31:43 PM - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=5)")': /search?q=Oregon&format=json&limit=1
+12/01/2025 02:33:05 PM - Extracted locations for 100 articles.
+2025-12-01 14:33:05 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13800 - extract_locations - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-12-01 14:33:05 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - extract_locations - Writing file at: /opt/dagster/dagster_home/storage/3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0/extract_locations/result using PickledObjectFilesystemIOManager...
+2025-12-01 14:33:06 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13800 - extract_locations - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-12-01 14:33:06 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13800 - extract_locations - STEP_SUCCESS - Finished execution of step "extract_locations" in 1m37s.

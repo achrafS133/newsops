@@ -1,0 +1,13 @@
+streamlit
+pandas
+altair
+clickhouse-driver
+neo4j
+plotly
+wordcloud
+networkx
+matplotlib
+textblob
+gnews
+psutil
+docker

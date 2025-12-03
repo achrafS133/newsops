@@ -1,0 +1,13 @@
+2025-11-30 15:15:02 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - LOGS_CAPTURED - Started capturing logs in process (pid: 371).
+2025-11-30 15:15:02 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - load_to_neo4j - STEP_START - Started execution of step "load_to_neo4j".
+11/30/2025 03:15:02 PM - Context impl SQLiteImpl.
+11/30/2025 03:15:02 PM - Will assume non-transactional DDL.
+2025-11-30 15:15:02 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - load_to_neo4j - Loading file from: /opt/dagster/dagster_home/storage/extract_locations using PickledObjectFilesystemIOManager...
+2025-11-30 15:15:02 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - load_to_neo4j - LOADED_INPUT - Loaded input "extract_locations" using input manager "io_manager", from output "result" of step "extract_locations"
+2025-11-30 15:15:02 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - load_to_neo4j - STEP_INPUT - Got input "extract_locations" of type "DataFrame". (Type check passed).
+11/30/2025 03:15:16 PM - Loaded 100 articles into Neo4j.
+2025-11-30 15:15:16 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - load_to_neo4j - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 15:15:16 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - load_to_neo4j - Writing file at: /opt/dagster/dagster_home/storage/load_to_neo4j using PickledObjectFilesystemIOManager...
+2025-11-30 15:15:16 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - load_to_neo4j - ASSET_MATERIALIZATION - Materialized value load_to_neo4j.
+2025-11-30 15:15:16 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - load_to_neo4j - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 15:15:17 +0000 - dagster - DEBUG - __ASSET_JOB - 8e6d41c7-1a7e-4008-b921-fa1b05b37226 - 371 - load_to_neo4j - STEP_SUCCESS - Finished execution of step "load_to_neo4j" in 14.47s.

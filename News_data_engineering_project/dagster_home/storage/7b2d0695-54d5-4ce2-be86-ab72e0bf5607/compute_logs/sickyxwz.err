@@ -1,0 +1,13 @@
+2025-12-01 18:32:41 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - LOGS_CAPTURED - Started capturing logs in process (pid: 19364).
+2025-12-01 18:32:41 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - detect_breaking_news - STEP_START - Started execution of step "detect_breaking_news".
+12/01/2025 06:32:41 PM - Context impl SQLiteImpl.
+12/01/2025 06:32:41 PM - Will assume non-transactional DDL.
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - detect_breaking_news - Loading file from: /opt/dagster/dagster_home/storage/load_to_clickhouse using PickledObjectFilesystemIOManager...
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - detect_breaking_news - LOADED_INPUT - Loaded input "load_to_clickhouse" using input manager "io_manager", from output "result" of step "load_to_clickhouse"
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - detect_breaking_news - STEP_INPUT - Got input "load_to_clickhouse" of type "Any". (Type check passed).
+12/01/2025 06:32:42 PM - Detected 2 breaking news items
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - detect_breaking_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - detect_breaking_news - Writing file at: /opt/dagster/dagster_home/storage/detect_breaking_news using PickledObjectFilesystemIOManager...
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - detect_breaking_news - ASSET_MATERIALIZATION - Materialized value detect_breaking_news.
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - detect_breaking_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-12-01 18:32:42 +0000 - dagster - DEBUG - __ASSET_JOB - 7b2d0695-54d5-4ce2-be86-ab72e0bf5607 - 19364 - detect_breaking_news - STEP_SUCCESS - Finished execution of step "detect_breaking_news" in 811ms.

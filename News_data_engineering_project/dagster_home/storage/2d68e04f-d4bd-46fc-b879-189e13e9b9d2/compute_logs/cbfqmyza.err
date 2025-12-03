@@ -1,0 +1,14 @@
+2025-12-01 10:04:21 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 1176 - LOGS_CAPTURED - Started capturing logs in process (pid: 1176).
+2025-12-01 10:04:21 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 1176 - ingest_news - STEP_START - Started execution of step "ingest_news".
+12/01/2025 10:04:21 AM - Fetching news from GNews...
+12/01/2025 10:04:41 AM - Remote end closed connection without response
+12/01/2025 10:05:08 AM - Remote end closed connection without response
+12/01/2025 10:05:32 AM - Remote end closed connection without response
+12/01/2025 10:07:29 AM - Fetched 20 articles across 5 categories.
+2025-12-01 10:07:29 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 1176 - ingest_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-12-01 10:07:30 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - ingest_news - Writing file at: /opt/dagster/dagster_home/storage/ingest_news using PickledObjectFilesystemIOManager...
+12/01/2025 10:07:30 AM - Context impl SQLiteImpl.
+12/01/2025 10:07:30 AM - Will assume non-transactional DDL.
+2025-12-01 10:07:30 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 1176 - ingest_news - ASSET_MATERIALIZATION - Materialized value ingest_news.
+2025-12-01 10:07:30 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 1176 - ingest_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-12-01 10:07:30 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 1176 - ingest_news - STEP_SUCCESS - Finished execution of step "ingest_news" in 3m12s.

@@ -1,0 +1,15 @@
+2025-11-30 15:49:57 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - LOGS_CAPTURED - Started capturing logs in process (pid: 11164).
+2025-11-30 15:49:57 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - extract_topics - STEP_START - Started execution of step "extract_topics".
+11/30/2025 03:49:57 PM - Context impl SQLiteImpl.
+11/30/2025 03:49:57 PM - Will assume non-transactional DDL.
+2025-11-30 15:49:57 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - extract_topics - Loading file from: /opt/dagster/dagster_home/storage/process_news using PickledObjectFilesystemIOManager...
+2025-11-30 15:49:57 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - extract_topics - LOADED_INPUT - Loaded input "process_news" using input manager "io_manager", from output "result" of step "process_news"
+2025-11-30 15:49:57 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - extract_topics - STEP_INPUT - Got input "process_news" of type "DataFrame". (Type check passed).
+11/30/2025 03:49:57 PM - Use pytorch device_name: cpu
+11/30/2025 03:49:57 PM - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+11/30/2025 03:50:11 PM - Extracted 4 topics.
+2025-11-30 15:50:11 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - extract_topics - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 15:50:12 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - extract_topics - Writing file at: /opt/dagster/dagster_home/storage/extract_topics using PickledObjectFilesystemIOManager...
+2025-11-30 15:50:12 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - extract_topics - ASSET_MATERIALIZATION - Materialized value extract_topics.
+2025-11-30 15:50:12 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - extract_topics - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 15:50:12 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11164 - extract_topics - STEP_SUCCESS - Finished execution of step "extract_topics" in 14.89s.

@@ -1,0 +1,13 @@
+2025-11-30 19:24:52 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - LOGS_CAPTURED - Started capturing logs in process (pid: 5167).
+2025-11-30 19:24:52 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - process_news - STEP_START - Started execution of step "process_news".
+11/30/2025 07:24:52 PM - Context impl SQLiteImpl.
+11/30/2025 07:24:52 PM - Will assume non-transactional DDL.
+2025-11-30 19:24:52 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - process_news - Loading file from: /opt/dagster/dagster_home/storage/ingest_news using PickledObjectFilesystemIOManager...
+2025-11-30 19:24:52 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - process_news - LOADED_INPUT - Loaded input "ingest_news" using input manager "io_manager", from output "result" of step "ingest_news"
+2025-11-30 19:24:52 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - process_news - STEP_INPUT - Got input "ingest_news" of type "DataFrame". (Type check passed).
+11/30/2025 07:24:53 PM - Processed sentiment for 100 articles.
+2025-11-30 19:24:53 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - process_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 19:24:53 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - process_news - Writing file at: /opt/dagster/dagster_home/storage/process_news using PickledObjectFilesystemIOManager...
+2025-11-30 19:24:53 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - process_news - ASSET_MATERIALIZATION - Materialized value process_news.
+2025-11-30 19:24:53 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - process_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 19:24:53 +0000 - dagster - DEBUG - __ASSET_JOB - 439fcfbd-d54f-455d-85c2-cc5cc3f59d9d - 5167 - process_news - STEP_SUCCESS - Finished execution of step "process_news" in 1.02s.

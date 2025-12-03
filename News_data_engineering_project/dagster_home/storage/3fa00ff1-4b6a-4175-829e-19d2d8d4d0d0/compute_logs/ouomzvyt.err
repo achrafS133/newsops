@@ -1,0 +1,10 @@
+2025-12-01 14:31:12 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13457 - LOGS_CAPTURED - Started capturing logs in process (pid: 13457).
+2025-12-01 14:31:12 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13457 - extract_topics - STEP_START - Started execution of step "extract_topics".
+2025-12-01 14:31:12 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - extract_topics - Loading file from: /opt/dagster/dagster_home/storage/3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0/process_news/result using PickledObjectFilesystemIOManager...
+2025-12-01 14:31:12 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13457 - extract_topics - LOADED_INPUT - Loaded input "process_news" using input manager "io_manager", from output "result" of step "process_news"
+2025-12-01 14:31:13 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13457 - extract_topics - STEP_INPUT - Got input "process_news" of type "DataFrame". (Type check passed).
+12/01/2025 02:31:13 PM - Extracted 6 topics using fast keyword matching.
+2025-12-01 14:31:13 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13457 - extract_topics - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-12-01 14:31:13 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - extract_topics - Writing file at: /opt/dagster/dagster_home/storage/3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0/extract_topics/result using PickledObjectFilesystemIOManager...
+2025-12-01 14:31:13 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13457 - extract_topics - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-12-01 14:31:13 +0000 - dagster - DEBUG - news_pipeline_job - 3fa00ff1-4b6a-4175-829e-19d2d8d4d0d0 - 13457 - extract_topics - STEP_SUCCESS - Finished execution of step "extract_topics" in 285ms.

@@ -1,0 +1,13 @@
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - LOGS_CAPTURED - Started capturing logs in process (pid: 8222).
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - detect_breaking_news - STEP_START - Started execution of step "detect_breaking_news".
+11/30/2025 04:05:43 PM - Context impl SQLiteImpl.
+11/30/2025 04:05:43 PM - Will assume non-transactional DDL.
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - detect_breaking_news - Loading file from: /opt/dagster/dagster_home/storage/load_to_clickhouse using PickledObjectFilesystemIOManager...
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - detect_breaking_news - LOADED_INPUT - Loaded input "load_to_clickhouse" using input manager "io_manager"
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - detect_breaking_news - STEP_INPUT - Got input "load_to_clickhouse" of type "Any". (Type check passed).
+11/30/2025 04:05:43 PM - Detected 0 breaking news alerts
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - detect_breaking_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - detect_breaking_news - Writing file at: /opt/dagster/dagster_home/storage/detect_breaking_news using PickledObjectFilesystemIOManager...
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - detect_breaking_news - ASSET_MATERIALIZATION - Materialized value detect_breaking_news.
+2025-11-30 16:05:43 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - detect_breaking_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 16:05:44 +0000 - dagster - DEBUG - __ASSET_JOB - 870671a6-7a22-47e6-9039-2dbe7b36340a - 8222 - detect_breaking_news - STEP_SUCCESS - Finished execution of step "detect_breaking_news" in 702ms.

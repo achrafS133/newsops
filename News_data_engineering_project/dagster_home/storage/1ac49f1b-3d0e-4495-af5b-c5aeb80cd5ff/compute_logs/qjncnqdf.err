@@ -1,0 +1,39 @@
+2025-12-01 14:47:48 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 26819 - LOGS_CAPTURED - Started capturing logs in process (pid: 26819).
+2025-12-01 14:47:48 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 26819 - load_to_clickhouse - STEP_START - Started execution of step "load_to_clickhouse".
+12/01/2025 02:47:48 PM - Context impl SQLiteImpl.
+12/01/2025 02:47:48 PM - Will assume non-transactional DDL.
+2025-12-01 14:47:49 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - load_to_clickhouse - Loading file from: /opt/dagster/dagster_home/storage/extract_locations using PickledObjectFilesystemIOManager...
+2025-12-01 14:47:49 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 26819 - load_to_clickhouse - LOADED_INPUT - Loaded input "extract_locations" using input manager "io_manager", from output "result" of step "extract_locations"
+2025-12-01 14:47:49 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 26819 - load_to_clickhouse - STEP_INPUT - Got input "extract_locations" of type "DataFrame". (Type check passed).
+2025-12-01 14:47:49 +0000 - dagster - ERROR - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 26819 - load_to_clickhouse - STEP_FAILURE - Execution of step "load_to_clickhouse" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "load_to_clickhouse"::
+
+KeyError: 'content'
+
+Stack Trace:
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/usr/local/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/opt/dagster/app/news_pipeline/assets.py", line 162, in load_to_clickhouse
+    client.execute('INSERT INTO news_articles VALUES', records)
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/client.py", line 376, in execute
+    rv = self.process_insert_query(
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/client.py", line 607, in process_insert_query
+    rv = self.send_data(sample_block, data,
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/client.py", line 658, in send_data
+    block = block_cls(sample_block.columns_with_types, chunk,
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/block.py", line 40, in __init__
+    self.data = self.normalize(data or [])
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/block.py", line 128, in normalize
+    self._mutate_dicts_to_rows(data)
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/block.py", line 159, in _mutate_dicts_to_rows
+    return self._pure_mutate_dicts_to_rows(
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/block.py", line 186, in _pure_mutate_dicts_to_rows
+    new_data.append(row[name])
+

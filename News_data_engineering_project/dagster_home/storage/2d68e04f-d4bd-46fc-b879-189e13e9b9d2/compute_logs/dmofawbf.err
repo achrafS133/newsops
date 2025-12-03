@@ -1,0 +1,48 @@
+2025-12-01 10:09:33 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 6178 - LOGS_CAPTURED - Started capturing logs in process (pid: 6178).
+2025-12-01 10:09:33 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 6178 - load_to_clickhouse - STEP_START - Started execution of step "load_to_clickhouse".
+12/01/2025 10:09:33 AM - Context impl SQLiteImpl.
+12/01/2025 10:09:33 AM - Will assume non-transactional DDL.
+2025-12-01 10:09:33 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - load_to_clickhouse - Loading file from: /opt/dagster/dagster_home/storage/extract_locations using PickledObjectFilesystemIOManager...
+2025-12-01 10:09:33 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 6178 - load_to_clickhouse - LOADED_INPUT - Loaded input "extract_locations" using input manager "io_manager", from output "result" of step "extract_locations"
+2025-12-01 10:09:33 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 6178 - load_to_clickhouse - STEP_INPUT - Got input "extract_locations" of type "DataFrame". (Type check passed).
+12/01/2025 10:09:37 AM - Failed to connect to clickhouse:9000
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/connection.py", line 428, in connect
+    return self._init_connection(host, port)
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/connection.py", line 358, in _init_connection
+    self.socket = self._create_socket(host, port)
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/connection.py", line 305, in _create_socket
+    for res in socket.getaddrinfo(host, port, 0, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.9/socket.py", line 966, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -5] No address associated with hostname
+2025-12-01 10:09:37 +0000 - dagster - ERROR - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 6178 - load_to_clickhouse - STEP_FAILURE - Execution of step "load_to_clickhouse" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "load_to_clickhouse"::
+
+clickhouse_driver.errors.NetworkError: Code: 210. No address associated with hostname (clickhouse:9000)
+
+Stack Trace:
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/usr/local/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/opt/dagster/app/news_pipeline/assets.py", line 141, in load_to_clickhouse
+    client.execute('DROP TABLE IF EXISTS news_articles')
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/client.py", line 370, in execute
+    with self.disconnect_on_error(query, settings):
+  File "/usr/local/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/client.py", line 313, in disconnect_on_error
+    self.establish_connection(settings)
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/client.py", line 300, in establish_connection
+    self.connection.force_connect()
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/connection.py", line 278, in force_connect
+    self.connect()
+  File "/usr/local/lib/python3.9/site-packages/clickhouse_driver/connection.py", line 449, in connect
+    raise err
+

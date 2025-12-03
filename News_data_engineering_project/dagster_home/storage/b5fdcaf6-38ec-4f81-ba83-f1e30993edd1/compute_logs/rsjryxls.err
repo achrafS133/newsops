@@ -1,0 +1,16 @@
+2025-11-30 15:48:42 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 9737 - LOGS_CAPTURED - Started capturing logs in process (pid: 9737).
+2025-11-30 15:48:42 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 9737 - ingest_news - STEP_START - Started execution of step "ingest_news".
+11/30/2025 03:48:42 PM - Fetching news from GNews...
+11/30/2025 03:48:42 PM - Failed to fetch Al Jazeera: 'GNews' object has no attribute 'get_news_by_search'
+11/30/2025 03:49:15 PM - Failed to fetch Morocco: 'GNews' object has no attribute 'get_news_by_search'
+11/30/2025 03:49:15 PM - Failed to fetch Algeria: 'GNews' object has no attribute 'get_news_by_search'
+11/30/2025 03:49:15 PM - Failed to fetch Middle East: 'GNews' object has no attribute 'get_news_by_search'
+11/30/2025 03:49:15 PM - Failed to fetch Africa: 'GNews' object has no attribute 'get_news_by_search'
+11/30/2025 03:49:21 PM - Fetched 120 articles across 10 categories including Al Jazeera and MENA region.
+2025-11-30 15:49:21 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 9737 - ingest_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 15:49:21 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - ingest_news - Writing file at: /opt/dagster/dagster_home/storage/ingest_news using PickledObjectFilesystemIOManager...
+11/30/2025 03:49:21 PM - Context impl SQLiteImpl.
+11/30/2025 03:49:21 PM - Will assume non-transactional DDL.
+2025-11-30 15:49:21 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 9737 - ingest_news - ASSET_MATERIALIZATION - Materialized value ingest_news.
+2025-11-30 15:49:22 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 9737 - ingest_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 15:49:22 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 9737 - ingest_news - STEP_SUCCESS - Finished execution of step "ingest_news" in 39.29s.

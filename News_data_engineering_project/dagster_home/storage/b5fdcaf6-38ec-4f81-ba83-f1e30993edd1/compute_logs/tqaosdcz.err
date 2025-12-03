@@ -1,0 +1,13 @@
+2025-11-30 15:50:28 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - LOGS_CAPTURED - Started capturing logs in process (pid: 11824).
+2025-11-30 15:50:28 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - extract_locations - STEP_START - Started execution of step "extract_locations".
+11/30/2025 03:50:28 PM - Context impl SQLiteImpl.
+11/30/2025 03:50:28 PM - Will assume non-transactional DDL.
+2025-11-30 15:50:28 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - extract_locations - Loading file from: /opt/dagster/dagster_home/storage/extract_topics using PickledObjectFilesystemIOManager...
+2025-11-30 15:50:28 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - extract_locations - LOADED_INPUT - Loaded input "extract_topics" using input manager "io_manager", from output "result" of step "extract_topics"
+2025-11-30 15:50:28 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - extract_locations - STEP_INPUT - Got input "extract_topics" of type "DataFrame". (Type check passed).
+11/30/2025 03:51:34 PM - Extracted locations for 120 articles.
+2025-11-30 15:51:34 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - extract_locations - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 15:51:34 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - extract_locations - Writing file at: /opt/dagster/dagster_home/storage/extract_locations using PickledObjectFilesystemIOManager...
+2025-11-30 15:51:34 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - extract_locations - ASSET_MATERIALIZATION - Materialized value extract_locations.
+2025-11-30 15:51:34 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - extract_locations - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 15:51:35 +0000 - dagster - DEBUG - __ASSET_JOB - b5fdcaf6-38ec-4f81-ba83-f1e30993edd1 - 11824 - extract_locations - STEP_SUCCESS - Finished execution of step "extract_locations" in 1m6s.

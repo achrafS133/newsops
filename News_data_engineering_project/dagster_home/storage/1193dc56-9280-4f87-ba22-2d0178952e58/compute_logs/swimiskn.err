@@ -1,0 +1,11 @@
+2025-11-30 14:59:21 +0000 - dagster - DEBUG - __ASSET_JOB - 1193dc56-9280-4f87-ba22-2d0178952e58 - 155 - LOGS_CAPTURED - Started capturing logs in process (pid: 155).
+2025-11-30 14:59:21 +0000 - dagster - DEBUG - __ASSET_JOB - 1193dc56-9280-4f87-ba22-2d0178952e58 - 155 - ingest_news - STEP_START - Started execution of step "ingest_news".
+11/30/2025 02:59:21 PM - Fetching news from GNews...
+11/30/2025 02:59:35 PM - Fetched 50 articles.
+2025-11-30 14:59:35 +0000 - dagster - DEBUG - __ASSET_JOB - 1193dc56-9280-4f87-ba22-2d0178952e58 - 155 - ingest_news - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 14:59:35 +0000 - dagster - DEBUG - __ASSET_JOB - 1193dc56-9280-4f87-ba22-2d0178952e58 - ingest_news - Writing file at: /opt/dagster/dagster_home/storage/ingest_news using PickledObjectFilesystemIOManager...
+11/30/2025 02:59:35 PM - Context impl SQLiteImpl.
+11/30/2025 02:59:35 PM - Will assume non-transactional DDL.
+2025-11-30 14:59:35 +0000 - dagster - DEBUG - __ASSET_JOB - 1193dc56-9280-4f87-ba22-2d0178952e58 - 155 - ingest_news - ASSET_MATERIALIZATION - Materialized value ingest_news.
+2025-11-30 14:59:35 +0000 - dagster - DEBUG - __ASSET_JOB - 1193dc56-9280-4f87-ba22-2d0178952e58 - 155 - ingest_news - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 14:59:35 +0000 - dagster - DEBUG - __ASSET_JOB - 1193dc56-9280-4f87-ba22-2d0178952e58 - 155 - ingest_news - STEP_SUCCESS - Finished execution of step "ingest_news" in 13.72s.

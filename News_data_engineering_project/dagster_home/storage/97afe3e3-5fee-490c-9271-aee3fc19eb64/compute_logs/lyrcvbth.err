@@ -1,0 +1,69 @@
+2025-11-30 19:27:51 +0000 - dagster - DEBUG - __ASSET_JOB - 97afe3e3-5fee-490c-9271-aee3fc19eb64 - 8291 - LOGS_CAPTURED - Started capturing logs in process (pid: 8291).
+2025-11-30 19:27:51 +0000 - dagster - DEBUG - __ASSET_JOB - 97afe3e3-5fee-490c-9271-aee3fc19eb64 - 8291 - load_to_neo4j - STEP_START - Started execution of step "load_to_neo4j".
+11/30/2025 07:27:51 PM - Context impl SQLiteImpl.
+11/30/2025 07:27:51 PM - Will assume non-transactional DDL.
+2025-11-30 19:27:52 +0000 - dagster - DEBUG - __ASSET_JOB - 97afe3e3-5fee-490c-9271-aee3fc19eb64 - load_to_neo4j - Loading file from: /opt/dagster/dagster_home/storage/extract_locations using PickledObjectFilesystemIOManager...
+2025-11-30 19:27:52 +0000 - dagster - DEBUG - __ASSET_JOB - 97afe3e3-5fee-490c-9271-aee3fc19eb64 - 8291 - load_to_neo4j - LOADED_INPUT - Loaded input "extract_locations" using input manager "io_manager", from output "result" of step "extract_locations"
+2025-11-30 19:27:52 +0000 - dagster - DEBUG - __ASSET_JOB - 97afe3e3-5fee-490c-9271-aee3fc19eb64 - 8291 - load_to_neo4j - STEP_INPUT - Got input "extract_locations" of type "DataFrame". (Type check passed).
+11/30/2025 07:27:56 PM - Neo4j connection attempt 1 failed: Cannot resolve address neo4j:7687
+11/30/2025 07:28:04 PM - Neo4j connection attempt 2 failed: Cannot resolve address neo4j:7687
+11/30/2025 07:28:13 PM - Neo4j connection attempt 3 failed: Cannot resolve address neo4j:7687
+11/30/2025 07:28:23 PM - Neo4j connection attempt 4 failed: Cannot resolve address neo4j:7687
+11/30/2025 07:28:32 PM - Neo4j connection attempt 5 failed: Cannot resolve address neo4j:7687
+2025-11-30 19:28:32 +0000 - dagster - ERROR - __ASSET_JOB - 97afe3e3-5fee-490c-9271-aee3fc19eb64 - 8291 - load_to_neo4j - STEP_FAILURE - Execution of step "load_to_neo4j" failed.
+
+dagster._core.errors.DagsterExecutionStepExecutionError: Error occurred while executing op "load_to_neo4j"::
+
+ValueError: Cannot resolve address neo4j:7687
+
+Stack Trace:
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/utils.py", line 57, in op_execution_error_boundary
+    yield
+  File "/usr/local/lib/python3.9/site-packages/dagster/_utils/__init__.py", line 392, in iterate_with_context
+    next_output = next(iterator)
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 137, in _coerce_op_compute_fn_to_iterator
+    result = invoke_compute_fn(
+  File "/usr/local/lib/python3.9/site-packages/dagster/_core/execution/plan/compute_generator.py", line 117, in invoke_compute_fn
+    return fn(context, **args_to_pass) if context_arg_provided else fn(**args_to_pass)
+  File "/opt/dagster/app/news_pipeline/assets.py", line 163, in load_to_neo4j
+    raise e
+  File "/opt/dagster/app/news_pipeline/assets.py", line 156, in load_to_neo4j
+    driver.verify_connectivity()
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/driver.py", line 1090, in verify_connectivity
+    self._get_server_info(session_config)
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/driver.py", line 1305, in _get_server_info
+    return session._get_server_info()
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/work/session.py", line 183, in _get_server_info
+    self._connect(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/work/session.py", line 136, in _connect
+    super()._connect(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/work/workspace.py", line 199, in _connect
+    self._connection = self._pool.acquire(**acquire_kwargs_)
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/io/_pool.py", line 676, in acquire
+    return self._acquire(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/io/_pool.py", line 417, in _acquire
+    return connection_creator()
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/io/_pool.py", line 230, in connection_creator
+    connection = self.opener(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/io/_pool.py", line 637, in opener
+    return Bolt.open(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/io/_bolt.py", line 368, in open
+    s, protocol_version, handshake, data = BoltSocket.connect(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_sync/io/_bolt_socket.py", line 319, in connect
+    for resolved_address in resolved_addresses:
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_async_compat/network/_util.py", line 196, in resolve_address
+    for address_dns_resolved in NetworkUtil._dns_resolver(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_async_compat/network/_util.py", line 151, in _dns_resolver
+    raise ValueError(f"Cannot resolve address {address}") from e
+
+The above exception was caused by the following exception:
+socket.gaierror: [Errno -2] Name or service not known
+
+Stack Trace:
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_async_compat/network/_util.py", line 144, in _dns_resolver
+    info = NetworkUtil.get_address_info(
+  File "/usr/local/lib/python3.9/site-packages/neo4j/_async_compat/network/_util.py", line 130, in get_address_info
+    return socket.getaddrinfo(host, port, family, type, proto, flags)
+  File "/usr/local/lib/python3.9/socket.py", line 966, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+

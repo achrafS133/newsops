@@ -1,0 +1,14 @@
+2025-12-01 10:08:25 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - LOGS_CAPTURED - Started capturing logs in process (pid: 5031).
+2025-12-01 10:08:25 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - extract_locations - STEP_START - Started execution of step "extract_locations".
+12/01/2025 10:08:25 AM - Context impl SQLiteImpl.
+12/01/2025 10:08:25 AM - Will assume non-transactional DDL.
+2025-12-01 10:08:25 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - extract_locations - Loading file from: /opt/dagster/dagster_home/storage/extract_topics using PickledObjectFilesystemIOManager...
+2025-12-01 10:08:25 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - extract_locations - LOADED_INPUT - Loaded input "extract_topics" using input manager "io_manager", from output "result" of step "extract_topics"
+2025-12-01 10:08:25 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - extract_locations - STEP_INPUT - Got input "extract_topics" of type "DataFrame". (Type check passed).
+12/01/2025 10:08:30 AM - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7ee5615e3c70>: Failed to resolve 'nominatim.openstreetmap.org' ([Errno -5] No address associated with hostname)")': /search?q=Kamoutsas&format=json&limit=1
+12/01/2025 10:09:18 AM - Extracted locations for 20 articles.
+2025-12-01 10:09:18 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - extract_locations - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-12-01 10:09:18 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - extract_locations - Writing file at: /opt/dagster/dagster_home/storage/extract_locations using PickledObjectFilesystemIOManager...
+2025-12-01 10:09:18 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - extract_locations - ASSET_MATERIALIZATION - Materialized value extract_locations.
+2025-12-01 10:09:18 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - extract_locations - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-12-01 10:09:18 +0000 - dagster - DEBUG - __anonymous_asset_job_daily_news_pipeline - 2d68e04f-d4bd-46fc-b879-189e13e9b9d2 - 5031 - extract_locations - STEP_SUCCESS - Finished execution of step "extract_locations" in 54.59s.

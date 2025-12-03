@@ -1,0 +1,13 @@
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - LOGS_CAPTURED - Started capturing logs in process (pid: 25224).
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - extract_topics - STEP_START - Started execution of step "extract_topics".
+12/01/2025 02:46:15 PM - Context impl SQLiteImpl.
+12/01/2025 02:46:15 PM - Will assume non-transactional DDL.
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - extract_topics - Loading file from: /opt/dagster/dagster_home/storage/process_news using PickledObjectFilesystemIOManager...
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - extract_topics - LOADED_INPUT - Loaded input "process_news" using input manager "io_manager", from output "result" of step "process_news"
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - extract_topics - STEP_INPUT - Got input "process_news" of type "DataFrame". (Type check passed).
+12/01/2025 02:46:15 PM - Extracted 6 topics using fast keyword matching.
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - extract_topics - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - extract_topics - Writing file at: /opt/dagster/dagster_home/storage/extract_topics using PickledObjectFilesystemIOManager...
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - extract_topics - ASSET_MATERIALIZATION - Materialized value extract_topics.
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - extract_topics - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-12-01 14:46:15 +0000 - dagster - DEBUG - __ASSET_JOB - 1ac49f1b-3d0e-4495-af5b-c5aeb80cd5ff - 25224 - extract_topics - STEP_SUCCESS - Finished execution of step "extract_topics" in 788ms.

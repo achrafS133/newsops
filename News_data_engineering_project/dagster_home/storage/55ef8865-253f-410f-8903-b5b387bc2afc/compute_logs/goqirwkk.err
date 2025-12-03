@@ -1,0 +1,13 @@
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - LOGS_CAPTURED - Started capturing logs in process (pid: 2221).
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - load_to_neo4j - STEP_START - Started execution of step "load_to_neo4j".
+11/30/2025 07:35:35 PM - Context impl SQLiteImpl.
+11/30/2025 07:35:35 PM - Will assume non-transactional DDL.
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - load_to_neo4j - Loading file from: /opt/dagster/dagster_home/storage/extract_locations using PickledObjectFilesystemIOManager...
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - load_to_neo4j - LOADED_INPUT - Loaded input "extract_locations" using input manager "io_manager"
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - load_to_neo4j - STEP_INPUT - Got input "extract_locations" of type "DataFrame". (Type check passed).
+11/30/2025 07:35:35 PM - Neo4j loading skipped - connection issues
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - load_to_neo4j - STEP_OUTPUT - Yielded output "result" of type "Any". (Type check passed).
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - load_to_neo4j - Writing file at: /opt/dagster/dagster_home/storage/load_to_neo4j using PickledObjectFilesystemIOManager...
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - load_to_neo4j - ASSET_MATERIALIZATION - Materialized value load_to_neo4j.
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - load_to_neo4j - HANDLED_OUTPUT - Handled output "result" using IO manager "io_manager"
+2025-11-30 19:35:35 +0000 - dagster - DEBUG - __ASSET_JOB - 55ef8865-253f-410f-8903-b5b387bc2afc - 2221 - load_to_neo4j - STEP_SUCCESS - Finished execution of step "load_to_neo4j" in 652ms.
