@@ -135,6 +135,80 @@ st.markdown("""
 
 @st.cache_resource
 def get_clickhouse_client():
+    # Attempt to load local data first (The "Bridge" Mode)
+    import json
+    import os
+    
+    local_data_path = "../web_app/data/articles.json"
+    if os.path.exists(local_data_path):
+        try:
+            with open(local_data_path, "r") as f:
+                data = json.load(f)
+            
+            # Create a Mock Client that mimics execute() behavior on local data
+            class LocalClient:
+                def __init__(self, data):
+                    self.df = pd.DataFrame(data)
+                    # Ensure datetime
+                    self.df['published_at'] = pd.to_datetime(self.df['published_at'])
+                
+                def execute(self, query):
+                    # Simple mock query parser for the specific queries used in this app
+                    query = query.lower()
+                    
+                    # Handle COUNT queries (both count() and count(DISTINCT...))
+                    if "count" in query and "news_articles" in query:
+                         if "distinct publisher" in query:
+                             return [[len(self.df['publisher'].unique())]] if not self.df.empty else [[0]]
+                         if "distinct topic_id" in query:
+                             return [[len(self.df['topic_label'].unique())]] if not self.df.empty else [[0]]
+                         if "group by category" in query:
+                             if self.df.empty: return []
+                             grp = self.df.groupby('category').agg({'sentiment': 'mean', 'category': 'count'}).rename(columns={'category': 'count', 'sentiment': 'avg_sentiment'})
+                             # Format: category, count, avg_sentiment
+                             return [[idx, row['count'], row['avg_sentiment']] for idx, row in grp.iterrows()]
+                         if "group by topic_label" in query:
+                             if self.df.empty: return []
+                             grp = self.df['topic_label'].value_counts()
+                             return [[topic, count] for topic, count in grp.items()][:10]
+                         if "publisher is not null" in query: # Publisher stats
+                             if self.df.empty: return []
+                             grp = self.df['publisher'].value_counts()
+                             return [[pub, count] for pub, count in grp.items()][:10]
+                         if "length(locations) > 0" in query: # Geo/Network
+                             if self.df.empty: return []
+                             # Return title, locations, sentiment, category
+                             filtered = self.df[self.df['locations'].apply(lambda x: len(x) > 0 if isinstance(x, list) else False)]
+                             if "group by locations" in query: # Geo Heatmap
+                                return [] 
+                             
+                             # Network data
+                             return [[row['title'], row['locations'], row['sentiment'], row['category']] for _, row in filtered.iterrows()][:20]
+
+                         # Default to simple count()
+                         if "count()" in query or "count(*)" in query:
+                            return [[len(self.df)]]
+                    
+                    if "avg(sentiment)" in query:
+                        return [[self.df['sentiment'].mean()]] if not self.df.empty else [[0.0]]
+                    
+                    if "select title" in query and "limit 100" in query:
+                        return [[t] for t in self.df['title'].head(100)]
+                        
+                    if "tostartofhour" in query: # Sentiment trend
+                         # Mock trend buckets
+                         return [] 
+                         
+                    if "select title, publisher" in query: # Main feed
+                        return self.df[['title', 'publisher', 'category', 'sentiment', 'published_at', 'topic_label', 'locations']].head(20).values.tolist()
+
+                    return []
+
+            return LocalClient(data)
+        except Exception as e:
+            st.error(f"Failed to load local data: {e}")
+            pass
+
     try:
         return Client(host='clickhouse')
     except:

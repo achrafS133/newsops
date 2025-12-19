@@ -1,7 +1,7 @@
 {
     "refresh_interval": "5 minutes",
     "max_articles": 100,
-    "sentiment_threshold": 0.5,
+    "sentiment_threshold": 0.06,
     "enable_alerts": true,
     "active_categories": [
         "Technology",
@@ -10,7 +10,5 @@
         "Health",
         "Science",
         "Entertainment"
-    ],
-    "openai_api_key": "aUPZD3vP6JfydQp",
-    "newsapi_key": "aUPZD3vP6JfydQp"
+    ]
 }

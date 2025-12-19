@@ -12,6 +12,10 @@ A Next-Generation News Data Engineering platform leveraging **Dagster**, **Click
 | **Graph DB** | Neo4j | Entity relationship mapping |
 | **Visualization** | Streamlit | Interactive data dashboard |
 
+### Pipeline Overview
+
+![Dagster Pipeline](dagster_pepline.png)
+
 ## Prerequisites
 
 - Docker & Docker Compose
