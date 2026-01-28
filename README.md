@@ -21,52 +21,52 @@
 
 ---
 
-## 🌟 Overview
+##  Overview
 
 **NewsOps** is a production-ready, full-stack data engineering platform that ingests, processes, and analyzes news articles in real-time. It combines cutting-edge technologies to deliver:
 
-- **🔄 Real-time Data Pipelines** — Orchestrated by Dagster with asset-based workflows
-- **🧠 AI-Powered Analytics** — Sentiment analysis, topic modeling, and entity extraction
-- **🗺️ Knowledge Graph** — Neo4j-powered entity relationships and location mapping
-- **📊 Business Intelligence** — Interactive dashboards with advanced visualizations
-- **⚡ High-Performance Storage** — ClickHouse OLAP database for lightning-fast queries
+- ** Real-time Data Pipelines** — Orchestrated by Dagster with asset-based workflows
+- ** AI-Powered Analytics** — Sentiment analysis, topic modeling, and entity extraction
+- ** Knowledge Graph** — Neo4j-powered entity relationships and location mapping
+- ** Business Intelligence** — Interactive dashboards with advanced visualizations
+- ** High-Performance Storage** — ClickHouse OLAP database for lightning-fast queries
 
 ---
 
-## 🎯 Features
+##  Features
 
-### 📡 Data Ingestion
+###  Data Ingestion
 - Multi-source news aggregation via GNews API
 - Configurable category filtering (Technology, Business, Sports, Health, Politics)
 - Real-time streaming with Apache Kafka
 - Automatic deduplication and data validation
 
-### 🧠 AI/ML Processing
+###  AI/ML Processing
 - **Sentiment Analysis** — TextBlob-powered polarity scoring
 - **Topic Extraction** — Keyword-based topic classification with BERTopic integration
 - **Named Entity Recognition** — spaCy NER for location, organization, and person extraction
 - **Geocoding** — Automatic coordinate extraction for geospatial analytics
 
-### 💾 Data Storage
+###  Data Storage
 - **ClickHouse** — Columnar OLAP database for fast analytical queries
 - **Neo4j** — Graph database for entity relationships and knowledge graphs
 - **PostgreSQL** — Metadata and orchestration state management
 
-### 📊 Visualization
+###  Visualization
 - **Streamlit Dashboard** — Real-time analytics with interactive charts
 - **Next.js Web App** — Modern, responsive UI with glassmorphism design
 - **Global Intelligence Map** — Geospatial visualization of news hotspots
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-### 🏠 Homepage
+###  Homepage
 <p align="center">
   <img src="screenshots/homepage.png" alt="NewsOps Homepage" width="800"/>
 </p>
 
-### 📊 Analytics Dashboard
+###  Analytics Dashboard
 <p align="center">
   <img src="screenshots/dashboard_top.png" alt="Analytics Dashboard - KPIs" width="800"/>
 </p>
@@ -75,19 +75,19 @@
   <img src="screenshots/dashboard_bottom.png" alt="Analytics Dashboard - ETL Pipeline & Map" width="800"/>
 </p>
 
-### 🔴 Live News Feed
+###  Live News Feed
 <p align="center">
   <img src="screenshots/live_feed.png" alt="Live News Feed" width="800"/>
 </p>
 
-### 🔄 Dagster Pipeline
+###  Dagster Pipeline
 <p align="center">
   <img src="dagster_pepline.png" alt="Dagster Asset Lineage" width="800"/>
 </p>
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -144,14 +144,14 @@
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 newsops/
-├── 📄 README.md                      # This file
-├── 📄 docker-compose.yml             # Full infrastructure definition
-├── 📷 dagster_pepline.png            # Pipeline visualization
-├── 📷 screenshots/                   # Application screenshots
+├──  README.md                      # This file
+├──  docker-compose.yml             # Full infrastructure definition
+├──  dagster_pepline.png            # Pipeline visualization
+├──  screenshots/                   # Application screenshots
 │   ├── homepage.png
 │   ├── dashboard_top.png
 │   ├── dashboard_bottom.png
@@ -159,7 +159,7 @@ newsops/
 │
 └── News_data_engineering_project/
     │
-    ├── 🔄 etl/                       # Dagster ETL Pipeline
+    ├──  etl/                       # Dagster ETL Pipeline
     │   ├── news_pipeline/
     │   │   ├── __init__.py           # Dagster definitions
     │   │   ├── assets.py             # Data assets (ingest, process, load)
@@ -168,7 +168,7 @@ newsops/
     │   ├── Dockerfile
     │   └── workspace.yaml
     │
-    ├── 📊 dashboard/                 # Streamlit Dashboard
+    ├──  dashboard/                 # Streamlit Dashboard
     │   ├── app.py                    # Main dashboard application
     │   ├── pages/                    # Multi-page dashboard
     │   │   ├── 01_All_Articles.py
@@ -184,7 +184,7 @@ newsops/
     │   ├── Dockerfile
     │   └── requirements.txt
     │
-    ├── 🌐 web_app/                   # Next.js Web Application
+    ├──  web_app/                   # Next.js Web Application
     │   ├── client/
     │   │   ├── app/
     │   │   │   ├── page.tsx          # Homepage
@@ -197,15 +197,15 @@ newsops/
     │   ├── server.js                 # API server
     │   └── Dockerfile
     │
-    ├── 🔧 shared_config/             # Shared configuration
+    ├──  shared_config/             # Shared configuration
     │   └── settings.json
     │
-    └── 📄 docker-compose.yml         # Service definitions
+    └──  docker-compose.yml         # Service definitions
 ```
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -213,7 +213,7 @@ newsops/
 - **Node.js 18+** — [Install Node.js](https://nodejs.org/)
 - **Python 3.9+** — [Install Python](https://www.python.org/)
 
-### 🐳 Quick Start with Docker
+###  Quick Start with Docker
 
 1. **Clone the repository**
    ```bash
@@ -236,7 +236,7 @@ newsops/
    | **Neo4j Browser** | [http://localhost:7474](http://localhost:7474) | Graph database explorer |
    | **ClickHouse** | [http://localhost:8123](http://localhost:8123) | OLAP query interface |
 
-### 🛠️ Development Setup
+###  Development Setup
 
 #### Running the Next.js Web App Locally
 
@@ -258,7 +258,7 @@ streamlit run app.py
 
 ---
 
-## 🔧 Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -292,7 +292,7 @@ Edit `shared_config/settings.json`:
 
 ---
 
-## 📊 Data Pipeline
+##  Data Pipeline
 
 ### Asset Lineage
 
@@ -322,7 +322,7 @@ ingest_news → process_news → extract_topics → extract_locations
 
 ---
 
-## 🎨 Dashboard Features
+##  Dashboard Features
 
 ### Main Dashboard
 - **KPI Cards** — Total articles, active sources, average sentiment
@@ -333,18 +333,18 @@ ingest_news → process_news → extract_topics → extract_locations
 - **Infrastructure Health** — Real-time status of ClickHouse and Neo4j
 
 ### Pages
-- **📰 All Articles** — Browse and search all ingested articles
-- **🔴 Breaking News** — Real-time breaking news alerts
-- **📅 Daily Digest** — Summarized daily news overview
-- **🏷️ Topic Extraction** — Explore topic clusters
-- **📍 NER Locations** — Geographic entity analysis
-- **📈 Sentiment Trends** — Historical sentiment analysis
-- **🔍 Neo4j Explorer** — Interactive knowledge graph exploration
-- **⚙️ System Metrics** — Infrastructure monitoring
+- ** All Articles** — Browse and search all ingested articles
+- ** Breaking News** — Real-time breaking news alerts
+- ** Daily Digest** — Summarized daily news overview
+- ** Topic Extraction** — Explore topic clusters
+- ** NER Locations** — Geographic entity analysis
+- ** Sentiment Trends** — Historical sentiment analysis
+- ** Neo4j Explorer** — Interactive knowledge graph exploration
+- ** System Metrics** — Infrastructure monitoring
 
 ---
 
-## 🗄️ Database Schemas
+## Database Schemas
 
 ### ClickHouse Table: `news_articles`
 
@@ -377,7 +377,7 @@ ORDER BY published_at
 
 ---
 
-## 🔒 Security
+##  Security
 
 - **Database Credentials** — Managed via environment variables
 - **Neo4j Authentication** — Default: `neo4j/password` (change in production!)
@@ -385,7 +385,7 @@ ORDER BY published_at
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -395,13 +395,13 @@ ORDER BY published_at
 
 ---
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [Dagster](https://dagster.io/) — Modern data orchestration
 - [ClickHouse](https://clickhouse.com/) — Lightning-fast OLAP
@@ -415,9 +415,9 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 ---
 
 <p align="center">
-  Made with ❤️ by the NewsOps Team
+  Made with ❤️ by Achraf ER-RAHOUTI
 </p>
 
 <p align="center">
-  <a href="#-newsops--news-intelligence-platform">Back to Top ⬆️</a>
+  <a href="#-newsops--news-intelligence-platform">Back to Top </a>
 </p>
