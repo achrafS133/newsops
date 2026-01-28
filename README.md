@@ -1,8 +1,6 @@
-<p align="center">
-  <img src="dagster_pepline.png" alt="NewsOps Pipeline" width="800"/>
-</p>
 
-<h1 align="center">📰 NewsOps — News Intelligence Platform</h1>
+
+<h1 align="center">NewsOps — News Intelligence Platform</h1>
 
 <p align="center">
   <b>A Next-Generation News Data Engineering Platform</b><br/>
